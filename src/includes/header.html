@@ -5,7 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="autor" content="Александр Актищев (Студия КИТ)"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
   <title><%= data.title %></title>
 </head>
 <body>
@@ -16,73 +22,13 @@
 
   <!-- Шапка документа -->
 
-  <header class="header container flex align-center justify-between gap-5 fixed zi-3 py-3 py-md-10 linear duration-3" data-header data-theme="light">
-    <!-- <a class="logo btn" href="/">
-      <picture>
-        <source srcset="img/pictures/logo.webp" type="image/webp">
-        <img class="w-100" src="img/pictures/logo.png" alt="">
-      </picture>
-    </a> -->
-    <nav class="d-none d-lg-flex align-center justify-between gap-3 mx-auto">
-      <a class="btn btn--white link text-14 bold-4 radius-1 p-2" data-scroll="top" href="#interaction">Взаимодействуем</a>
-      <a class="btn btn--white link text-14 bold-4 radius-1 p-2" data-scroll="top" href="#directions">Направления</a>
-      <a class="btn btn--white link text-14 bold-4 radius-1 p-2" data-scroll="top" href="#services">Услуги</a>
-      <a class="btn btn--white link text-14 bold-4 radius-1 p-2" data-scroll="top" href="#experts">Эксперты</a>
-      <a class="btn btn--white link text-14 bold-4 radius-1 p-2" data-scroll="top" href="#partners">Партнеры</a>
-    </nav>
-    <input class="switch switch--toggle d-none d-lg-block" data-theme="toggle" type="checkbox">
-    <a class="btn btn--white link font-alt text-16 text-md-20 bold-8 radius-1 w-max" href="tel: +7 (918) 000 00 00">+7 (918) 000 00 00</a>
-    <button class="btn btn--white d-lg-none text-44 radius-2" data-waved data-burger>
-      <svg class="icon">
-        <use xlink:href="img/icons.svg#burger">
-      </svg>
-    </button>
-  </header>
-
-  <!-- Мобильное меню -->
-
-  <section class="mobile fixed zi-6 w-100 h-100 ease duration-1" data-mobile="hidden" data-theme="light">
-    <div class="mobile__content flex flex-column overflow-auto bg-green w-100 h-100 ease duration-3">
-      <div class="mobile__head flex align-center justify-between gap-2 relative p-4 ease duration-5 delay-3">
-        <a class="logo btn" href="/">
-          <picture>
-            <source srcset="img/pictures/logo.webp" type="image/webp">
-            <img class="w-100" src="img/pictures/logo.png" alt="">
-          </picture>
-        </a>
-        <input class="switch switch--toggle" data-theme="toggle" type="checkbox">
-        <button class="btn text-24" data-mobile-close>
-          <svg class="icon color-white">
-            <use xlink:href="img/icons.svg#close">
-          </svg>
-        </button>
-      </div>
-      <div class="mobile__nav flex flex-column gap-6 relative color-white mb-10 p-4 ease duration-9 delay-5">
-        <a class="link text-22 w-max" data-scroll="top" href="#interaction">Взаимодействуем</a>
-        <a class="link text-22 w-max" data-scroll="top" href="#directions">Направления</a>
-        <a class="link text-22 w-max" data-scroll="top" href="#services">Услуги</a>
-        <a class="link text-22 w-max" data-scroll="top" href="#experts">Эксперты</a>
-        <a class="link text-22 w-max" data-scroll="top" href="#partners">Партнеры</a>
-      </div>
-      <div class="mobile__footer relative mt-auto px-4 pt-4 pb-10 ease duration-5 delay-9">
-        <div class="flex flex-column gap-5">
-          <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 w-max p-2" data-waved href="" target="_blank">
-            <div class="mobile__item flex align-center justify-center color-green bg-white radius-2 mr-4">
-              <svg class="icon text-36">
-                <use xlink:href="img/icons.svg#dzen">
-              </svg>
-            </div>
-            Дзен
-          </a>
-          <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 w-max p-2" data-waved href="" target="_blank">
-            <div class="mobile__item flex align-center justify-center color-green bg-white radius-max mr-4">
-              <svg class="icon text-18">
-                <use xlink:href="img/icons.svg#tg">
-              </svg>
-            </div>
-            Телеграм
-          </a>
-        </div>
-      </div>
+  <header class="header container flex align-center justify-between gap-3 absolute zi-3 py-3 py-md-6">
+    <a class="btn btn--white d-none d-md-flex flex-column align-start radius-1" href="/">
+      <span class="font-alt text-10 text-md-14 bold-4">Комитет по инвестициями финансовым рынкам</span>
+      <span class="font-alt text text--uppercase text-12 text-md-16 bold-8">ККО ОПОРА РОССИИ</span>
+    </a>
+    <div class="flex align-center justify-between w-100 w-md-auto">
+      <input class="switch switch--toggle mr-5 mr-md-10" data-theme="toggle" type="checkbox">
+      <a class="btn btn--white link font-alt text-16 text-md-20 bold-8 radius-1 w-max" href="tel: +7(988)240-03-11">+7(988)240-03-11</a>
     </div>
-  </section>
+  </header>

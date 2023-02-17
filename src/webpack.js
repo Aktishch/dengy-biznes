@@ -2,10 +2,7 @@
 import fancybox from './lib/fancybox'
 
 // Scripts
-import scrollHeader from './ts/scroll-header'
-import mobileMenu from './ts/mobile-menu'
 import progressLine from './ts/progress-line'
-import scrollTo from './ts/scroll-to'
 import theme from './ts/theme'
 import animation from './ts/animation'
 import waved from './ts/waved'
@@ -22,10 +19,7 @@ import './scss/index.scss'
 window.addEventListener('DOMContentLoaded', () => {
 
   fancybox.init()
-  scrollHeader.init()
-  mobileMenu.init()
   progressLine.init()
-  scrollTo.init()
   theme.init()
   animation.init()
   waved.init()

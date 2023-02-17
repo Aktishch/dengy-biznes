@@ -1,3 +1,42 @@
+// Прогресс прокрутки страницы
+.progress-line {
+  top   : 0;
+  left  : 0;
+  right : 0;
+  height: 3px;
+}
+
+// Шапка документа
+.header {
+  top  : 0;
+  left : 0;
+  right: 0;
+}
+
+// Главный блок
+.main {
+  min-height      : 860px;
+  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
+
+  &__pack {
+    max-width: 890px;
+  }
+
+  &__logo {
+    max-width: 290px;
+  }
+
+  @media(max-width: $md) {
+    & {
+      min-height: 700px;
+    }
+
+    &__logo {
+      max-width: 240px;
+    }
+  }
+}
+
 // Взаимодействие
 .interaction {
   &__block {
@@ -12,34 +51,15 @@
   }
 }
 
+// Эксперты
+.experts {
+  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
+}
+
 // Услуги
 .services {
   &__accordion[data-accordion="active"] &__arrow {
     transform: rotate(-90deg);
-  }
-}
-
-// Эксперты
-.experts {
-  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
-
-  &__pack {
-    min-width : 100px;
-    width     : 100px;
-    height    : 100px;
-    background: linear-gradient(180deg, rgba(42, 142, 151, 0.6) 0%, rgba(42, 142, 151, 0) 60.9%), #0B0F0B;
-  }
-
-  @media(max-width: $md) {
-    &__card {
-      flex-direction: row;
-    }
-
-    &__pack {
-      min-width: 80px;
-      width    : 80px;
-      height   : 80px;
-    }
   }
 }
 
