@@ -1,0 +1,34 @@
+// Полоса прокрутки
+* {
+  scrollbar: {
+    width: thin;
+    color: var(--color-primary) var(--color-second-30);
+  }
+
+  &::-webkit-scrollbar {
+    @media(pointer: fine) {
+      width: 10px;
+
+      &-track {
+        background-color: var(--color-second-30);
+      }
+
+      &-thumb {
+        background-color: var(--color-primary);
+      }
+
+      &-corner {
+        background-color: var(--color-second-30);
+      }
+    }
+
+    @media(hover) {
+
+      &-thumb:hover,
+      &-button:vertical:hover,
+      &-button:horizontal:hover {
+        background-color: var(--color-primary-dark);
+      }
+    }
+  }
+}

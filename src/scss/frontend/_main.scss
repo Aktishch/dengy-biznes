@@ -1,0 +1,71 @@
+// Взаимодействие
+.interaction {
+  &__block {
+    background-color: var(--color-grey-70);
+  }
+
+  &__check {
+    min-width : 48px;
+    width     : 48px;
+    height    : 48px;
+    background: linear-gradient(180deg, var(--color-white-60) 100%, var(--color-none) 100%), var(--color-grey-dark);
+  }
+}
+
+// Услуги
+.services {
+  &__accordion[data-accordion="active"] &__arrow {
+    transform: rotate(-90deg);
+  }
+}
+
+// Эксперты
+.experts {
+  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
+
+  &__pack {
+    min-width : 100px;
+    width     : 100px;
+    height    : 100px;
+    background: linear-gradient(180deg, rgba(42, 142, 151, 0.6) 0%, rgba(42, 142, 151, 0) 60.9%), #0B0F0B;
+  }
+
+  @media(max-width: $md) {
+    &__card {
+      flex-direction: row;
+    }
+
+    &__pack {
+      min-width: 80px;
+      width    : 80px;
+      height   : 80px;
+    }
+  }
+}
+
+// Соц сети
+.social {
+  &__block {
+    background: linear-gradient(90deg, #0A5B67 14.92%, #4DB8BA 100%);
+    min-height: 390px;
+  }
+
+  &__item {
+    min-width: 36px;
+    width    : 36px;
+    height   : 36px;
+  }
+
+  @media(max-width: $xl) {
+    &__bg {
+      opacity: 0.5;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__items {
+      align-items   : flex-start;
+      flex-direction: column;
+    }
+  }
+}

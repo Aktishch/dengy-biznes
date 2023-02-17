@@ -1,0 +1,330 @@
+<% var data = {
+
+  title: 'dengy-biznes.ru',
+  status: true
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Главный блок -->
+
+<main class="main bg-green" style="height: 800px;"></main>
+
+
+<!-- Взаимодействие -->
+
+<% var interaction = [
+  'С органами власти, государственными фондами поддержки предпринимательства и развития бизнеса, Банком России',
+  'С профильными бизнес-объединениями, ассоциациями и союзами',
+  'С ММВБ и рейтинговыми агентствами по вопросам вывода компаний на биржу (IPO, размещение облигаций)',
+  'С банками и фондами по программам господдержки и кредитования бизнеса',
+  'С инвестиционными платформами, УК ПИФ, операторами выпуска и оборота ЦФА по вопросам коллективных инвестиций в бизнес-проекты и коммерческую недвижимость'
+] %>
+
+<section class="interaction container container--sm bg-white" id="interaction">
+  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-8 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <span class="fade-80">Комитет по инвестициям и финансовым рынкам</span> <br>
+    <span class="text text--uppercase bold-6">ККО ОПОРА РОССИИ</span> <span class="fade-80">взаимодействует</span>
+  </h2>
+  <div class="interaction__block flex flex-column gap-4 radius-8 border p-4 p-md-8 mb-5 mb-md-8">
+    <% for (var i = 0; i < interaction.length; i++) { %>
+      <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="card flex-row align-center radius-3 p-4 p-md-2" data-waved>
+          <div class="interaction__check d-none d-md-flex align-center justify-center color-second text-30 radius-3 mr-2 mr-md-4">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#success">
+            </svg>
+          </div>
+          <p class="text-14 text-md-16 bold-4 lh-4"><%= interaction[i] %></p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <button class="btn btn--primary btn--lg btn--fill color-black mx-auto px-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-appeal.html">Написать обращение</button>
+  </div>
+</section>
+
+<!-- Направления -->
+
+<% var directions = [
+  {
+    icon: 'case',
+    title: 'Девелопмент',
+    text: 'Строительство и управление <br class="d-none d-md-block"> коммерческой недвижимостью'
+  },
+  {
+    item: 'delay-lg-2',
+    icon: 'user',
+    title: 'Социальный бизнес',
+    text: 'Строительство и управление <br class="d-none d-md-block"> коммерческой недвижимостью'
+  },
+  {
+    item: 'delay-lg-4',
+    icon: 'setting',
+    title: 'Производство',
+    text: 'Строительство и управление <br class="d-none d-md-block"> коммерческой недвижимостью'
+  },
+  {
+    data: 'data-listing-item',
+    item: 'd-none d-md-block',
+    icon: 'repeat',
+    title: 'Переработка',
+    text: 'Строительство и управление <br class="d-none d-md-block"> коммерческой недвижимостью'
+  },
+  {
+    data: 'data-listing-item',
+    item: 'd-none d-md-block delay-lg-2',
+    icon: 'day',
+    title: 'Фермерство',
+    text: 'Строительство и управление <br class="d-none d-md-block"> коммерческой недвижимостью'
+  },
+  {
+    data: 'data-listing-item',
+    item: 'd-none d-md-block delay-lg-4',
+    icon: 'sign',
+    title: 'Туризм',
+    text: 'Строительство и управление <br class="d-none d-md-block"> коммерческой недвижимостью'
+  }
+] %>
+
+<section class="directions container container--sm relative bg-grey" id="directions">
+  <div class="bg-block pointer-none fade-50">
+    <div class="pack pack--rect h-100">
+      <picture>
+        <source srcset="img/pictures/waves-bg.webp" type="image/webp">
+        <img class="image" src="img/pictures/waves-bg.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="relative" data-listing>
+    <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <span class="bold-6">Основные направления бизнеса,</span> <span class="fade-80">которые сопровождает <br>
+      Комитет по инвестициям и финансовым рынкам</span>
+    </h2>
+    <div class="grid gap-4 gap-md-6 pt-lg-5">
+      <% for (var i = 0; i < directions.length; i++) { %>
+        <div class="col-12 col-md-6 col-lg-4 <% if (directions[i].item) { %><%= directions[i].item %><% } %> ease-in-out duration-4 anim anim--up" <% if (directions[i].data) { %><%= directions[i].data %><% } %> data-anim="hidden">
+          <div class="card pointer link-wrapper h-100" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-detail.html">
+            <div class="flex align-center justify-between border-bottom py-4 px-4 py-md-6 px-md-8">
+              <span class="text-18 text-md-20 bold-6 mr-3"><%= directions[i].title %></span>
+              <svg class="icon color-second text-32 text-md-46">
+                <use xlink:href="img/icons.svg#<%= directions[i].icon %>">
+              </svg>
+            </div>
+            <div class="card-content pt-4 pb-6 pt-md-6 pb-md-8 px-4 px-md-8">
+              <p class="link text-14 text-md-16 bold-4 lh-2 mb-5 mb-md-8">
+                <%= directions[i].text %>
+              </p>
+              <button class="btn btn--primary btn--lg btn--fill color-black w-max mt-auto px-8">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <button class="btn btn--primary btn--lg btn--fade d-md-none color-black mx-auto mt-5" data-listing-show>Показать еще</button>
+  </div>
+</section>
+
+<!-- Услуги -->
+
+<% var services = [
+  'Профессиональное консультирование предпринимателей и инвесторов',
+  'Сопровождение инвестиционных проектов',
+  'Сопровождение выпуска цифровых прав (ЦФА/УЦП) и эмиссионных ценных бумаг (акций, облигаций) для привлечения инвестиций в бизнес'
+] %>
+
+<section class="services container bg-white overflow-hidden" id="services">
+  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <span class="fade-80">Эксперты</span> <span class="bold-6">Комитета по инвестициям и финансовым <br class="d-none d-lg-block"> 
+    рынкам</span> <span class="fade-80">осуществляют</span>
+  </h2>
+  <div class="flex flex-column mt-3 mt-md-6 border-top mb-5 mb-md-8">
+    <% for (var i = 0; i < services.length; i++) { %>
+      <div class="services__accordion relative link-wrapper border-bottom py-3 py-md-6 ease-in-out duration-4 anim anim--right" data-anim="hidden" data-waved data-accordion="hidden">
+        <div class="flex align-center justify-between gap-3 pointer" data-accordion-toggle>
+          <div class="flex align-center">
+            <svg class="icon d-none d-md-block color-second text-24 mr-4">
+              <use xlink:href="img/icons.svg#success">
+            </svg>
+            <h4 class="link text-14 text-md-16 text-lg-20 bold-5 lh-2"><%= services[i] %></h4>
+          </div>
+          <svg class="services__arrow icon color-second text-16 text-md-22 mr-4 ease duration-3">
+            <use xlink:href="img/icons.svg#arrow-right">
+          </svg>
+        </div>
+        <div data-accordion-content>
+          <div class="bg-grey radius-8 mt-3 mt-md-5 p-5 p-md-10">
+            <ul class="listing gap-3 gap-md-5">
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Подготовка проекта решения о выпуске соответствующего вида цифрового финансового актива (ЦФА):</span>
+              </li>
+              <ul class="listing gap-1 color-black pl-3 pl-md-5">
+                <li class="text-14 text-md-16 bold-4">цифровой облигации</li>
+                <li class="text-14 text-md-16 bold-4">токена на акции АО</li>
+                <li class="text-14 text-md-16 bold-4">цифрового квадратного метра</li>
+              </ul>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Помощь в создании цифровых АО</span>
+              </li>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Взаимодействие с оператором выпуска ЦФА</span>
+              </li>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Подготовка бизнес-проекта для размещения на инвестиционной платформе</span>
+              </li>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Подготовка проекта решения о выпуске акций, облигаций</span>
+              </li>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Подготовка проекта решения о выпуске соответствующего вида утилитарного цифрового права (УЦП):</span>
+              </li>
+              <ul class="listing gap-1 color-black pl-3 pl-md-5">
+                <li class="text-14 text-md-16 bold-4">права требования передачи вещей</li>
+                <li class="text-14 text-md-16 bold-4">права использования интеллектуальной деятельности</li>
+                <li class="text-14 text-md-16 bold-4">права требования выполнения работ/оказания услуг</li>
+              </ul>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Взаимодействие с оператором инвестиционной платформы</span>
+              </li>
+              <li class="color-second">
+                <span class="color-black text-14 text-md-16 bold-4 lh-4">Содействие в привлечении инвесторов</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <button class="btn btn--primary btn--lg btn--fill color-black text-14 text-md-16 mx-auto px-md-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-order.html">Заказать бесплатную консультацию</button>
+  </div>
+</section>
+
+<!-- Эксперты -->
+
+<% var experts = [
+  {
+    delay: '',
+    title: 'Ирина Татаренко',
+    text: 'Основатель и генеральный директор'
+  },
+  {
+    delay: 'delay-lg-2',
+    title: 'Валентин Шевченко',
+    text: 'Директор по равитию'
+  },
+  {
+    delay: 'delay-lg-4',
+    title: 'Константин Костин',
+    text: 'Директор по общественным связям'
+  },
+  {
+    delay: 'delay-lg-6',
+    title: 'Ирина Татаренко мл',
+    text: 'Основатель и генеральный директор'
+  }
+] %>
+
+<section class="experts container container--sm color-black relative" data-theme="light" id="experts">
+  <div class="bg-block pointer-none fade-20">
+    <div class="pack pack--rect h-100">
+      <picture>
+        <source srcset="img/pictures/waves-bg.webp" type="image/webp">
+        <img class="image" src="img/pictures/waves-bg.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="relative">
+    <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <span class="fade-80">Наши</span> <span class="bold-6">эксперты</span>
+    </h2>
+    <div class="grid gap-4 gap-md-6">
+      <% for (var i = 0; i < experts.length; i++) { %>
+        <div class="col-12 col-md-6 col-lg-3 ease-in-out duration-4 <%= experts[i].delay %> anim anim--up" data-anim="hidden">
+          <div class="experts__card card link-wrapper pointer h-100 py-8 px-4 px-md-7" data-waved>
+            <div class="experts__pack pack pack--box bg-grey radius-max w-100 mr-4 mr-md-0 mb-8 mb-md-10">
+              <picture>
+                <source srcset="img/pictures/ava.webp" type="image/webp">
+                <img class="image" src="img/pictures/ava.png" alt="">
+              </picture>
+            </div>
+            <div class="card-content">
+              <h4 class="link text-18 text-md-20 bold-6 mb-3"><%= experts[i].title %></h4>
+              <p class="text-14 text-md-16 bold-4 lh-3 fade-60 mb-5 mb-md-8">
+                <%= experts[i].text %>
+              </p>
+              <button class="btn btn--primary btn--lg btn--fill color-black w-max mt-auto px-md-8">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Соц сети -->
+
+<section class="social container overflow-hidden">
+  <div class="social__block flex align-center relative radius-8 overflow-hidden py-10 px-6 px-md-10 ease-in-out duration-4 anim anim--left" data-anim="hidden" data-theme="light">
+    <div class="bg-block pointer-none">
+      <div class="social__bg pack pack--rect h-100">
+        <picture>
+          <source srcset="img/pictures/dzen.webp" type="image/webp">
+          <img class="image" src="img/pictures/dzen.png" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="relative color-white px-md-10">
+      <h2 class="font-alt color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10">
+        <span class="fade-80">Ознакомится с</span> <span class="bold-6">нашими <br>
+          статьями</span> <span class="fade-80">вы можете здесь</span>
+      </h2>
+      <div class="social__items flex flex-wrap align-center gap-3 gap-md-5">
+        <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 p-2" data-waved href="" target="_blank">
+          <div class="social__item flex align-center justify-center color-green bg-white radius-2 mr-4">
+            <svg class="icon text-36">
+              <use xlink:href="img/icons.svg#dzen">
+            </svg>
+          </div>
+          Дзен
+        </a>
+        <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 p-2" data-waved href="" target="_blank">
+          <div class="social__item flex align-center justify-center color-green bg-white radius-max mr-4">
+            <svg class="icon text-18">
+              <use xlink:href="img/icons.svg#tg">
+            </svg>
+          </div>
+          Телеграм
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Партнеры -->
+
+<% var partners = ['', 'delay-lg-2', 'delay-lg-4', 'delay-lg-6'] %>
+
+<section class="partners container bg-grey overflow-hidden" id="partners">
+  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+    <span class="bold-6">Партнеры</span> <span class="fade-80">проекта «Деньги в бизнес»</span>
+  </h2>
+  <div class="grid gap-4 pt-lg-5">
+    <% for (var i = 0; i < 4; i++) { %>
+      <div class="col-6 col-lg-3 ease-in-out duration-4 <%= partners[i] %> anim anim--left" data-anim="hidden">
+        <a class="card h-100" data-waved href="" target="_blank">
+          <div class="pack pack--box">
+            <picture>
+              <source srcset="img/pictures/partner-<%= i + 1 %>.webp" type="image/webp">
+              <img class="image image--sd" src="img/pictures/partner-<%= i + 1 %>.png" alt="">
+            </picture>
+          </div>
+        </a>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<%= require('./includes/footer.html').default %>
