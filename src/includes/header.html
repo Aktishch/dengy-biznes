@@ -23,12 +23,19 @@
   <!-- Шапка документа -->
 
   <header class="header container flex align-center justify-between gap-3 absolute zi-3 py-3 py-md-6">
-    <a class="btn btn--white d-none d-md-flex flex-column align-start radius-1" href="/">
-      <span class="font-alt text-10 text-md-14 bold-4">Комитет по инвестициями финансовым рынкам</span>
-      <span class="font-alt text text--uppercase text-12 text-md-16 bold-8">ККО ОПОРА РОССИИ</span>
+    <a class="btn btn--white radius-1" data-waved href="/">
+      <div class="logo mr-5">
+        <picture>
+          <source srcset="img/pictures/logo.webp" type="image/webp">
+          <img class="w-100" src="img/pictures/logo.png" alt="">
+        </picture>
+      </div>
+      <div class="d-none d-md-block font-alt text-10 text-lg-18 bold-5 lh-5">
+        Комитет по инвестициям и финансовым рынкам <br>ККО ОПОРА РОССИИ
+      </div>
     </a>
-    <div class="flex align-center justify-between w-100 w-md-auto">
-      <input class="switch switch--toggle mr-5 mr-md-10" data-theme="toggle" type="checkbox">
+    <div class="header__items flex align-center justify-between">
+      <input class="switch switch--toggle mb-2 mb-md-0 mr-md-5 mr-lg-10" data-theme="toggle" type="checkbox">
       <a class="btn btn--white link font-alt text-16 text-md-20 bold-8 radius-1 w-max" href="tel: +7(988)240-03-11">+7(988)240-03-11</a>
-    </div>
+    </div> 
   </header>

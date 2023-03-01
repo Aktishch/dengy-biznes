@@ -16,15 +16,6 @@ body {
 
     & :is([data-theme="light"]) {
       background: var(--color-black-80);
-
-      & .main__pack {
-        filter : grayscale(100%);
-        opacity: 0.3;
-      }
-
-      & .main__logo {
-        filter: grayscale(30%);
-      }
     }
   }
 }

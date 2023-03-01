@@ -6,33 +6,59 @@
   height: 3px;
 }
 
+// Логотип
+.logo {
+  width: 92px;
+}
+
 // Шапка документа
 .header {
   top  : 0;
   left : 0;
   right: 0;
+
+  @media(max-width: $md) {
+    &__items {
+      flex-direction: column;
+      align-items   : flex-end;
+    }
+  }
 }
 
 // Главный блок
 .main {
-  min-height      : 860px;
-  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
+  min-height: 860px;
 
-  &__pack {
-    max-width: 890px;
+  &__bg {
+    &::before {
+      content         : "";
+      position        : absolute;
+      inset           : 0;
+      background-image: linear-gradient(73.62deg, var(--color-green) 0%, var(--color-none) 72.11%);
+      z-index         : 1;
+    }
   }
 
-  &__logo {
-    max-width: 290px;
+  @media(min-width: $xl) {
+    &__title {
+      font-size: calc(2 * var(--text-28));
+    }
+  }
+
+  @media(max-width: $lg) {
+    & {
+      min-height: 700px;
+    }
   }
 
   @media(max-width: $md) {
     & {
-      min-height: 700px;
+      height: 600px;
     }
 
-    &__logo {
-      max-width: 240px;
+    &__title,
+    &__text {
+      text-align: center;
     }
   }
 }

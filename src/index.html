@@ -1,6 +1,6 @@
 <% var data = {
 
-  title: 'dengy-biznes.ru',
+  title: 'Деньги в бизнес',
   status: true
 
 } %>
@@ -9,25 +9,9 @@
 
 <!-- Главный блок -->
 
-<main class="main container flex flex-column align-center justify-center relative" data-theme="light">
-  <div class="bg-block d-none d-lg-block pointer-none">
-    <div class="main__pack pack pack--rect h-100 ml-auto w-100">
-      <picture>
-        <source srcset="img/pictures/arrows.webp" type="image/webp">
-        <img class="image" src="img/pictures/arrows.png" alt="">
-      </picture>
-    </div>
-  </div>
-  <div class="bg-block pointer-none fade-30">
-    <div class="pack pack--rect h-100">
-      <picture>
-        <source srcset="img/pictures/waves-bg.webp" type="image/webp">
-        <img class="image" src="img/pictures/waves-bg.png" alt="">
-      </picture>
-    </div>
-  </div>
-  <div class="flex flex-column align-center justify-center relative color-white w-100">
-    <div class="main__logo pack pack--box w-100 mb-10">
+<main class="main container flex flex-column justify-center relative" data-theme="light">
+  <div class="main__bg bg-block bg-black pointer-none" data-anim="hidden">
+    <div class="pack pack--rect h-100 linear duration-10 anim anim--decrease" data-anim="hidden">
       <div class="loader">
         <span class="loader-progress">
           <svg class="loader-icon icon">
@@ -36,35 +20,32 @@
         </span>
       </div>
       <picture>
-        <source srcset="img/pictures/logo.webp" type="image/webp">
-        <img class="image image--sd" src="img/pictures/logo.png" alt="">
+        <source srcset="img/pictures/world.webp" type="image/webp">
+        <img class="image image--tl" src="img/pictures/world.jpg" alt="">
       </picture>
     </div>
-    <h1 class="font-alt text text--center text--uppercase text-20 text-md-30 text-lg-42 bold-8 lh-5 mb-10">
-      Консультационно-информационный <br class="d-none d-md-block">
-      проект для предпринимателей
+  </div>
+  <div class="flex flex-column relative zi-1 color-white">
+    <h1 class="main__title font-alt text-30 text-md-40 text-lg-50 bold-8 lh-5 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <span class="text text--uppercase bold-8">Деньги</span> в <span class="text text--uppercase bold-8">бизнес</span>
     </h1>
-    <h3 class="font-alt text text--center text--uppercase text-16 text-md-20 text-lg-24 bold-4 lh-3">
-      Руководитель проекта: <br class="d-md-none"> <span class="bold-6">Николаева Юлия Борисовна</span>
-    </h3>
+    <p class="main__text text-14 text-md-20 text-ld-24 bold-4 lh-5 ease-in-out duration-5 delay-3 anim anim--up" data-anim="hidden">
+      консультационно-информационный проект <br class="d-none d-md-block">
+      для предпринимателей и инвесторов
+    </p>
   </div>
 </main>
 
 <!-- Взаимодействие -->
 
 <% var interaction = [
-  'С региональными и муниципальными органами власти, профильными ведомствами и бизнес-объединениями по вопросам реализации инвестиционных проектов',
-  'С банками и фондами по программам господдержки и кредитования бизнеса',
-  'С инвестиционными платформами, управляющими компаниями ПИФ, операторами выпуска и оборота ЦФА, Московской биржей в части коллективных инвестиций',
-  'С образовательными центрами, аудиторскими и консалтинговыми компаниями',
-  'С частными инвесторами, специализированными фондами и клубами, инвестиционными компаниями по вопросам финансирования бизнес-проектов'
+  'Финансовое просвещение, повышение уровня финансовой грамотности и формирование культуры инвестирования',
+  'Содействие в развитии «народного финансирования» инвестиционных проектов в сфере производства и девелопмента',
+  'Разработка и внедрение типовых моделей цифровых коллективных инвестиций в бизнес и коммерческую недвижимость'
 ] %>
 
 <section class="interaction container container--sm bg-white">
-  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-8 ease-in-out duration-4 anim anim--up" data-anim="hidden">
-    Комитет по инвестициям и финансовым рынкам <br>
-    <span class="text text--uppercase bold-6">ККО ОПОРА РОССИИ</span> взаимодействует
-  </h2>
+  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-8 ease-in-out duration-4 anim anim--up" data-anim="hidden">Цели и задачи проекта</h2>
   <div class="interaction__block flex flex-column gap-4 radius-8 border p-4 p-md-8 mb-5 mb-md-8">
     <% for (var i = 0; i < interaction.length; i++) { %>
       <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
@@ -80,7 +61,7 @@
     <% } %>
   </div>
   <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
-    <button class="btn btn--primary btn--lg btn--fill color-black mx-auto px-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-appeal.html">Написать обращение</button>
+    <button class="btn btn--primary btn--lg btn--fill color-black mx-auto px-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-appeal.html">Подробнее о проекте</button>
   </div>
 </section>
 
@@ -91,7 +72,7 @@
     icon: 'consultation',
     title: 'Бесплатные консультации',
     text: 'По вопросам финансирования бизнес-проектов и привлечения коллективных инвестиций',
-    btn: 'Оставить заявку'
+    btn: 'Задать вопрос'
   },
   {
     data: 'data-listing-item',
@@ -99,7 +80,7 @@
     icon: 'events',
     title: 'Деловые мероприятия',
     text: 'Форумы, конференции, бизнес-завтраки, семинары, <br class="d-none d-md-block"> мастер-классы, деловые игры, стратегические сессии',
-    btn: 'Календарь мероприятий'
+    btn: 'Афиша событий'
   },
   {
     data: 'data-listing-item',
@@ -115,7 +96,7 @@
     icon: 'invest',
     title: 'Привлечение инвесторов',
     text: 'Только в рентабельные инвестиционные проекты и доходную коммерческую недвижимость',
-    btn: 'Подробнее'
+    btn: 'Подать заявку'
   }
 ] %>
 
@@ -201,12 +182,12 @@
   </div>
   <div class="relative" data-listing="2">
     <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
-      Приоритетные для сопровождения <span class="bold-6">направления бизнеса</span>
+      Приоритетные <span class="bold-6">направления бизнеса</span>
     </h2>
     <div class="grid gap-4 gap-md-5 pt-lg-5">
       <% for (var i = 0; i < experts.length; i++) { %>
         <div class="col-12 col-md-6 col-lg-3 ease-in-out duration-4 <%= experts[i].item %> anim anim--up" <% if (experts[i].data) { %><%= experts[i].data %><% } %> data-anim="hidden">
-          <div class="card link-wrapper pointer h-100 py-8 px-4 px-md-6" data-waved>
+          <div class="experts__card card link-wrapper pointer h-100 py-8 px-4 px-md-6" data-waved>
             <span class="color-green text-30 text-md-40 mb-5 mb-md-10">
               <svg class="icon zoom-2">
                 <use xlink:href="img/icons.svg#<%= experts[i].icon %>">
@@ -217,7 +198,7 @@
               <p class="text-14 text-md-16 bold-4 lh-4 fade-60 mb-5 mb-md-8">
                 <%= experts[i].text %>
               </p>
-              <button class="btn btn--primary btn--lg btn--fill color-black w-max mt-auto">Оставить заявку</button>
+              <button class="experts__btn btn btn--green radius-1 w-max py-3 px-2 mt-auto">Оставить заявку</button>
             </div>
           </div>
         </div>

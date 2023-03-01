@@ -21,6 +21,7 @@
   cursor         : pointer;
 
   @include getBtn("primary");
+  @include getBtn("green");
   @include getBtn("white");
 
   &--lg {
