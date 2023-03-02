@@ -23,6 +23,7 @@
   @include getBtn("primary");
   @include getBtn("green");
   @include getBtn("white");
+  @include getBtn("black");
 
   &--lg {
     --size: var(--size-lg);
@@ -53,11 +54,11 @@
   &--light {
     color           : var(--btn-color);
     background-color: var(--btn-accent);
-    border          : 2px solid var(--color-none);
+    border          : 1px solid var(--color-none);
   }
 
   &--contur {
-    border: 2px solid var(--btn-color);
+    border: 1px solid var(--btn-color);
   }
 
   &:focus {

@@ -1,5 +1,7 @@
 // Libraries
+import airDatepicker from './lib/air-datepicker'
 import fancybox from './lib/fancybox'
+import sliderSwiper from './lib/slider-swiper'
 
 // Scripts
 import progressLine from './ts/progress-line'
@@ -18,7 +20,9 @@ import './scss/index.scss'
 // Connection
 window.addEventListener('DOMContentLoaded', () => {
 
+  airDatepicker.init()
   fancybox.init()
+  sliderSwiper.init()
   progressLine.init()
   theme.init()
   animation.init()

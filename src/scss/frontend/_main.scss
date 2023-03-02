@@ -63,8 +63,8 @@
   }
 }
 
-// Взаимодействие
-.interaction {
+// Задачи
+.tasks {
   &__block {
     background-color: var(--color-grey-70);
   }
@@ -77,9 +77,37 @@
   }
 }
 
-// Эксперты
-.experts {
+// Приоритет
+.priority {
   background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
+
+  &__pack {
+    max-width : 100px;
+    background: linear-gradient(180deg, rgba(42, 142, 151, 0.6) 0%, rgba(42, 142, 151, 0) 60.9%), #0B0F0B;
+  }
+}
+
+// Инструменты
+.tools {
+  @media(min-width: $md) {
+    &__pack {
+      &::before {
+        padding-top: 65%;
+      }
+    }
+  }
+
+  @media(min-width: $lg) {
+    &__pack {
+      max-width: 600px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__block {
+      flex-direction: column;
+    }
+  }
 }
 
 // Услуги
@@ -112,6 +140,47 @@
     &__items {
       align-items   : flex-start;
       flex-direction: column;
+    }
+  }
+}
+
+// Бизнес
+.business {
+  &__pack {
+    background-image: linear-gradient(90deg, #0A5B67 14.92%, #4DB8BA 100%);
+  }
+
+  @media(min-width: $md) {
+    &__pack {
+      &::before {
+        padding-top: 65%;
+      }
+    }
+  }
+}
+
+// Программа
+.programs {
+  &-slider {
+    background-color: var(--color-black-10);
+  }
+
+  &__card {
+    min-height: 300px;
+  }
+
+  &__pack {
+    max-width: 100px;
+  }
+
+  @media(max-width: $md) {
+    &-slider {
+      border-radius: 0;
+      background   : none;
+    }
+
+    &__card {
+      min-height: 250px;
     }
   }
 }

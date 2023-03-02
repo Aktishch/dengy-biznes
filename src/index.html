@@ -36,38 +36,38 @@
   </div>
 </main>
 
-<!-- Взаимодействие -->
+<!-- Задачи -->
 
-<% var interaction = [
+<% var tasks = [
   'Финансовое просвещение, повышение уровня финансовой грамотности и формирование культуры инвестирования',
   'Содействие в развитии «народного финансирования» инвестиционных проектов в сфере производства и девелопмента',
   'Разработка и внедрение типовых моделей цифровых коллективных инвестиций в бизнес и коммерческую недвижимость'
 ] %>
 
-<section class="interaction container container--sm bg-white">
+<section class="tasks container bg-white">
   <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-8 ease-in-out duration-4 anim anim--up" data-anim="hidden">Цели и задачи проекта</h2>
-  <div class="interaction__block flex flex-column gap-4 radius-8 border p-4 p-md-8 mb-5 mb-md-8">
-    <% for (var i = 0; i < interaction.length; i++) { %>
+  <div class="tasks__block flex flex-column gap-4 radius-8 border p-4 p-md-8 mb-5 mb-md-8">
+    <% for (var i = 0; i < tasks.length; i++) { %>
       <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
         <div class="card flex-row align-center radius-3 p-4 p-md-2" data-waved>
-          <div class="interaction__check d-none d-md-flex align-center justify-center color-second text-30 radius-3 mr-2 mr-md-4">
+          <div class="tasks__check d-none d-md-flex align-center justify-center color-second text-30 radius-3 mr-2 mr-md-4">
             <svg class="icon">
               <use xlink:href="img/icons.svg#success">
             </svg>
           </div>
-          <p class="text-14 text-md-16 bold-4 lh-4"><%= interaction[i] %></p>
+          <p class="text-14 text-md-16 bold-4 lh-4"><%= tasks[i] %></p>
         </div>
       </div>
     <% } %>
   </div>
   <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
-    <button class="btn btn--primary btn--lg btn--fill color-black mx-auto px-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-appeal.html">Подробнее о проекте</button>
+    <button class="btn btn--primary btn--lg btn--fill color-black mx-auto px-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-detail.html">Подробнее о проекте</button>
   </div>
 </section>
 
-<!-- Направления -->
+<!-- Организация -->
 
-<% var directions = [
+<% var organization = [
   {
     icon: 'consultation',
     title: 'Бесплатные консультации',
@@ -75,24 +75,20 @@
     btn: 'Задать вопрос'
   },
   {
-    data: 'data-listing-item',
-    item: 'd-none d-md-block delay-md-2',
+    item: 'delay-md-2',
     icon: 'events',
     title: 'Деловые мероприятия',
     text: 'Форумы, конференции, бизнес-завтраки, семинары, <br class="d-none d-md-block"> мастер-классы, деловые игры, стратегические сессии',
     btn: 'Афиша событий'
   },
   {
-    data: 'data-listing-item',
-    item: 'd-none d-md-block',
     icon: 'setting',
     title: 'Сопровождение проектов',
     text: 'Квалифицированная помощь в реализации новых направлений бизнеса от идеи до запуска',
     btn: 'Подробнее'
   },
   {
-    data: 'data-listing-item',
-    item: 'd-none d-md-block delay-md-2',
+    item: 'delay-md-2',
     icon: 'invest',
     title: 'Привлечение инвесторов',
     text: 'Только в рентабельные инвестиционные проекты и доходную коммерческую недвижимость',
@@ -100,7 +96,7 @@
   }
 ] %>
 
-<section class="directions container container--sm relative bg-grey">
+<section class="organization container relative bg-grey">
   <div class="bg-block pointer-none fade-50">
     <div class="pack pack--rect h-100">
       <picture>
@@ -109,69 +105,61 @@
       </picture>
     </div>
   </div>
-  <div class="relative" data-listing="2">
+  <div class="relative">
     <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
       В рамках проекта <span class="bold-6">«Деньги в бизнес»</span> мы организуем
     </h2>
     <div class="grid gap-4 gap-md-8 pt-lg-5">
-      <% for (var i = 0; i < directions.length; i++) { %>
-        <div class="col-12 col-md-6 <% if (directions[i].item) { %><%= directions[i].item %><% } %> ease-in-out duration-4 anim anim--up" <% if (directions[i].data) { %><%= directions[i].data %><% } %> data-anim="hidden">
+      <% for (var i = 0; i < organization.length; i++) { %>
+        <div class="col-12 col-md-6 <% if (organization[i].item) { %><%= organization[i].item %><% } %> ease-in-out duration-4 anim anim--up" data-anim="hidden">
           <div class="card pointer link-wrapper h-100" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-detail.html">
             <div class="flex align-center justify-between border-bottom py-5 px-4 px-md-8">
-              <span class="text-18 text-md-20 bold-6 mr-3"><%= directions[i].title %></span>
+              <span class="text-18 text-md-20 bold-6 mr-3"><%= organization[i].title %></span>
               <span class="color-green text-20 text-md-28">
                 <svg class="icon zoom-2">
-                  <use xlink:href="img/icons.svg#<%= directions[i].icon %>">
+                  <use xlink:href="img/icons.svg#<%= organization[i].icon %>">
                 </svg>
               </span>
             </div>
             <div class="card-content pt-4 pb-6 pt-md-6 pb-md-8 px-4 px-md-8">
               <p class="link text-14 text-md-16 bold-4 lh-2 mb-5 mb-md-8">
-                <%= directions[i].text %>
+                <%= organization[i].text %>
               </p>
-              <button class="btn btn--primary btn--lg btn--fill color-black w-max mt-auto px-md-8"><%= directions[i].btn %></button>
+              <button class="btn btn--primary btn--lg btn--fill color-black w-max mt-auto px-md-8"><%= organization[i].btn %></button>
             </div>
           </div>
         </div>
       <% } %>
     </div>
-    <button class="btn btn--primary btn--lg btn--fill d-md-none color-black mx-auto mt-5" data-listing-show>Показать еще</button>
   </div>
 </section>
 
-<!-- Эксперты -->
+<!-- Направления -->
 
-<% var experts = [
+<% var directions = [
   {
-    item: '',
     icon: 'chart',
     title: 'Производство',
     text: 'Рассматриваются актуальные для региона направления производства и переработки, инвестиции в производственную недвижимость и оборудование'
   },
   {
-    data: 'data-listing-item',
-    item: 'd-none d-md-block delay-md-2',
     icon: 'management',
     title: 'Управление недвижимостью',
     text: 'Коллективные инвестиции в доходную коммерческую недвижимость: логистические центры, ритейл, деловые центры, курортную недвижимость.'
   },
   {
-    data: 'data-listing-item',
-    item: 'd-none d-md-block delay-lg-4',
     icon: 'build',
     title: 'Девелопмент',
     text: 'Строительство актуальных для региона объектов туризма и индустрии гостеприимства, социальной инфраструктуры, коттеджных эко-поселков'
   },
   {
-    data: 'data-listing-item',
-    item: 'd-none d-md-block delay-md-2 delay-lg-6',
     icon: 'world',
     title: 'Агротуризм и рекреация',
     text: 'Реализация региональных инвестиционных проектов и развитие бизнеса в сфере сельского хозяйства, туризма и санаторно-курортной деятельности'
   }
 ] %>
 
-<section class="experts container container--sm color-black relative" data-theme="light">
+<section class="priority container container--sm color-black relative overflow-hidden" data-theme="light">
   <div class="bg-block pointer-none fade-20">
     <div class="pack pack--rect h-100">
       <picture>
@@ -180,31 +168,288 @@
       </picture>
     </div>
   </div>
-  <div class="relative" data-listing="2">
+  <div class="relative">
     <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
       Приоритетные <span class="bold-6">направления бизнеса</span>
     </h2>
-    <div class="grid gap-4 gap-md-5 pt-lg-5">
-      <% for (var i = 0; i < experts.length; i++) { %>
-        <div class="col-12 col-md-6 col-lg-3 ease-in-out duration-4 <%= experts[i].item %> anim anim--up" <% if (experts[i].data) { %><%= experts[i].data %><% } %> data-anim="hidden">
-          <div class="experts__card card link-wrapper pointer h-100 py-8 px-4 px-md-6" data-waved>
-            <span class="color-green text-30 text-md-40 mb-5 mb-md-10">
-              <svg class="icon zoom-2">
-                <use xlink:href="img/icons.svg#<%= experts[i].icon %>">
-              </svg>
-            </span>
-            <div class="card-content mt-md-5">
-              <h4 class="link text-18 text-md-20 bold-6 mb-3"><%= experts[i].title %></h4>
-              <p class="text-14 text-md-16 bold-4 lh-4 fade-60 mb-5 mb-md-8">
-                <%= experts[i].text %>
-              </p>
-              <button class="experts__btn btn btn--green radius-1 w-max py-3 px-2 mt-auto">Оставить заявку</button>
+    <div class="priority-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <div class="swiper swiper--overwrap overflow-visible">
+        <div class="swiper-wrapper">
+          <% for (var i = 0; i < directions.length; i++) { %>
+            <div class="swiper-slide h-auto">
+              <div class="card link-wrapper pointer h-100 py-8 px-4 px-md-6" data-waved>
+                <span class="color-green text-30 text-md-40 mb-5 mb-md-10">
+                  <svg class="icon zoom-2">
+                    <use xlink:href="img/icons.svg#<%= directions[i].icon %>">
+                  </svg>
+                </span>
+                <div class="card-content mt-md-5">
+                  <h4 class="link text-18 text-md-20 bold-6 mb-3"><%= directions[i].title %></h4>
+                  <p class="text-14 text-md-16 bold-4 lh-4 fade-60 mb-5 mb-md-8">
+                    <%= directions[i].text %>
+                  </p>
+                  <button class="btn btn--green radius-1 w-max py-3 px-2 mt-auto">
+                    Оставить заявку
+                    <svg class="icon ml-2">
+                      <use xlink:href="img/icons.svg#arrow">
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
+          <% } %>
         </div>
-      <% } %>
+        <div class="swiper-pagination d-flex d-lg-none color-primary mt-5"></div>
+      </div>
     </div>
-    <button class="btn btn--primary btn--lg btn--fill d-md-none color-black mx-auto mt-5" data-listing-show>Показать еще</button>
+  </div>
+</section>
+
+<!-- Инструменты -->
+
+<% var tools = ['Краудфинансирование', 'Акции непубличных АО', 'Утилитарные цифровые права (УЦП)', 'Цифровые облигации (ЦФА)', 'Специализированные ЗПИФ'] %>
+
+<section class="tools container container--sm bg-white overflow-hidden">
+  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <span class="bold-6">Инструменты</span> коллективных инвестиций
+  </h2>
+  <div class="tools__block flex align-center justify-between gap-5 gap-lg-10 bg-grey radius-8 py-6 px-3 px-md-6">
+    <div class="tools__pack pack pack--rect bg-white radius-8 w-100 h-100 ease-in-out duration-4 anim anim--right" data-anim="hidden">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/logo-xl.webp" type="image/webp">
+        <img class="image image--sd" src="img/pictures/logo-xl.png" alt="">
+      </picture>
+    </div>
+    <div class="flex flex-column w-100 pr-lg-10 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+      <div class="flex flex-column mb-5 mb-md-7">
+        <% for (var i = 0; i < tools.length; i++) { %>
+          <div class="flex align-center justify-between relative link-wrapper pointer <%= i == 4 ? '' : 'border-bottom' %> py-3" data-waved>
+            <div class="flex align-center">
+              <svg class="icon text-24 color-second mr-2 mr-md-5">
+                <use xlink:href="img/icons.svg#success">
+              </svg>
+              <span class="link text-16 bold-5 lh-4"><%= tools[i] %></span>
+            </div>
+            <svg class="icon color-second text-18">
+              <use xlink:href="img/icons.svg#arrow">
+            </svg>
+          </div>
+        <% } %>
+      </div>
+      <button class="btn btn--primary btn--lg btn--fill color-black w-max" data-waved>Заказать консультацию</button>
+    </div>
+  </div>
+</section>
+
+<!-- Соц сети -->
+
+<section class="social container overflow-hidden pt-0">
+  <div class="social__block flex align-center relative radius-8 overflow-hidden py-10 px-6 px-md-10 ease-in-out duration-4 anim anim--left" data-anim="hidden" data-theme="light">
+    <div class="bg-block pointer-none">
+      <div class="social__bg pack pack--rect h-100">
+        <picture>
+          <source srcset="img/pictures/dzen.webp" type="image/webp">
+          <img class="image" src="img/pictures/dzen.png" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="relative color-white px-md-10">
+      <h2 class="font-alt color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10">
+        <span class="fade-80">Ознакомиться с</span> <span class="bold-6">публикациями <br>
+        и информацией</span><span class="fade-80">можно здесь</span>
+      </h2>
+      <div class="social__items flex flex-wrap align-center gap-3 gap-md-5">
+        <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 p-2" data-waved href="" target="_blank">
+          <div class="social__item flex align-center justify-center color-green bg-white radius-2 mr-4">
+            <svg class="icon text-36">
+              <use xlink:href="img/icons.svg#dzen">
+            </svg>
+          </div>
+          Дзен
+        </a>
+        <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 p-2" data-waved href="" target="_blank">
+          <div class="social__item flex align-center justify-center color-green bg-white radius-max mr-4">
+            <svg class="icon text-18">
+              <use xlink:href="img/icons.svg#tg">
+            </svg>
+          </div>
+          Телеграм
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Программа -->
+
+<% var programs = [
+  {
+    title: 'Фонд развития бизнеса',
+    subtitle: 'Краснодарского края'
+  },
+  {
+    title: 'Фонд развития промышленности',
+    subtitle: 'Краснодарского края'
+  },
+  {
+    title: 'Фонд развития инноваций',
+    subtitle: 'Краснодарского края'
+  },
+  {
+    title: 'Фонд микрофинансирования',
+    subtitle: 'Краснодарского края'
+  }
+] %>
+
+<% var banks = [
+  {
+    img: 'prom',
+    name: 'Промсвязьбанк'
+  },
+  {
+    img: 'sber',
+    name: 'Сбер'
+  },
+  {
+    img: 'invest',
+    name: 'Центр-инвест'
+  },
+  {
+    img: 'kuban',
+    name: 'Кубань Кредит'
+  }
+] %>
+
+<section class="programs container relative bg-grey overflow-hidden">
+  <div class="bg-block pointer-none fade-30">
+    <div class="pack pack--rect h-100">
+      <picture>
+        <source srcset="img/pictures/waves-bg.webp" type="image/webp">
+        <img class="image" src="img/pictures/waves-bg.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="relative">
+    <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      Программы <span class="bold-6">господдержки и льготного</span> кредитования
+    </h2>
+    <h3 class="text text--center text-22 text-lg-24 bold-4 lh-3 mb-5 mb-md-8 ease-in-out duration-4 anim anim--up" data-anim="hidden">Региональные фонды господдержки предпринимательства</h3>
+    <div class="programs-slider relative radius-8 p-md-4 mb-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <div class="swiper swiper--overwrap">
+        <div class="swiper-wrapper">
+          <% for (var i = 0; i < programs.length; i++) { %>
+            <div class="swiper-slide h-auto">
+              <div class="programs__card card h-100 p-5" data-waved>
+                <div class="card-content align-center justify-end h-100">
+                  <h4 class="text text--center text-16 text-md-18 text-lg-20 bold-6 lh-3 mb-1"><%= programs[i].title %></h4>
+                  <p class="text text--center text-14 text-md-16 bold-4 lh-3 mb-10 pb-md-5"><%= programs[i].subtitle %></p>
+                  <button class="btn btn--primary btn--lg btn--fill color-black">Перейти на сайт</button>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        <div class="swiper-pagination d-flex d-lg-none color-green mt-5"></div>
+      </div>
+    </div>
+    <h3 class="text text--center text-22 text-lg-24 bold-4 lh-3 mb-5 mb-md-8 ease-in-out duration-4 anim anim--up" data-anim="hidden">Банки</h3>
+    <div class="programs-slider relative radius-8 p-md-4 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <div class="swiper swiper--overwrap">
+        <div class="swiper-wrapper">
+          <% for (var i = 0; i < banks.length; i++) { %>
+            <div class="swiper-slide h-auto">
+              <div class="programs__card card h-100 py-10 px-5" data-waved>
+                <div class="card-content align-center justify-end h-100">
+                  <div class="programs__pack pack pack--box w-100">
+                    <picture>
+                      <source srcset="img/pictures/<%= banks[i].img %>.webp" type="image/webp">
+                      <img class="image image--sd" src="img/pictures/<%= banks[i].img %>.png" alt="">
+                    </picture>
+                  </div>
+                  <h4 class="text text--center text-16 text-md-18 text-lg-20 bold-6 lh-3 mt-10 pt-md-5"><%= banks[i].name %></h4>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        <div class="swiper-pagination d-flex d-lg-none color-green mt-5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Эксперты -->
+
+<% var experts = [
+  {
+    name: 'Наталья Джораева',
+    text: 'Основатель и генеральный директор'
+  },
+  {
+    name: 'Евгений Иванов',
+    text: 'Директор по развитию'
+  },
+  {
+    name: 'Наталья Джораева',
+    text: 'Директор по развитию'
+  },
+  {
+    name: 'Евгений Иванов',
+    text: 'Директор по развитию'
+  }
+] %>
+
+<section class="priority container container--sm color-black relative overflow-hidden" data-theme="light">
+  <div class="bg-block pointer-none fade-20">
+    <div class="pack pack--rect h-100">
+      <picture>
+        <source srcset="img/pictures/waves-bg.webp" type="image/webp">
+        <img class="image" src="img/pictures/waves-bg.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="relative">
+    <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      Эксперты <span class="bold-6">проекта</span>
+    </h2>
+    <div class="priority-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <div class="swiper swiper--overwrap overflow-visible">
+        <div class="swiper-wrapper">
+          <% for (var i = 0; i < experts.length; i++) { %>
+            <div class="swiper-slide h-auto">
+              <div class="card link-wrapper pointer h-100 pt-8 pb-6 px-4 px-md-6" data-waved>
+                <div class="priority__pack pack pack--box radius-max w-100 mb-10">
+                  <div class="loader">
+                    <span class="loader-progress">
+                      <svg class="loader-icon icon">
+                        <use xlink:href="img/icons.svg#loader">
+                      </svg>
+                    </span>
+                  </div>
+                  <picture>
+                    <source srcset="img/pictures/person.webp" type="image/webp">
+                    <img class="image" loading="lazy" src="img/pictures/person.png" alt="">
+                  </picture>
+                </div>
+                <div class="card-content">
+                  <h4 class="text-18 text-md-20 bold-6 lh-3 mb-3"><%= experts[i].name %></h4>
+                  <p class="link text-14 text-md-16 bold-4 lh-4 fade-60 mb-5 mb-md-8"><%= experts[i].text %></p>
+                  <button class="btn btn--primary btn--lg btn--fill color-black mt-auto">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        <div class="swiper-pagination d-flex d-lg-none color-primary mt-5"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -285,66 +530,44 @@
   </div>
 </section>
 
-<!-- Соц сети -->
-
-<section class="social container overflow-hidden pt-0">
-  <div class="social__block flex align-center relative radius-8 overflow-hidden py-10 px-6 px-md-10 ease-in-out duration-4 anim anim--left" data-anim="hidden" data-theme="light">
-    <div class="bg-block pointer-none">
-      <div class="social__bg pack pack--rect h-100">
-        <picture>
-          <source srcset="img/pictures/dzen.webp" type="image/webp">
-          <img class="image" src="img/pictures/dzen.png" alt="">
-        </picture>
-      </div>
-    </div>
-    <div class="relative color-white px-md-10">
-      <h2 class="font-alt color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10">
-        <span class="fade-80">Ознакомится с</span> <span class="bold-6">нашими <br>
-          статьями</span> <span class="fade-80">вы можете здесь</span>
-      </h2>
-      <div class="social__items flex flex-wrap align-center gap-3 gap-md-5">
-        <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 p-2" data-waved href="" target="_blank">
-          <div class="social__item flex align-center justify-center color-green bg-white radius-2 mr-4">
-            <svg class="icon text-36">
-              <use xlink:href="img/icons.svg#dzen">
-            </svg>
-          </div>
-          Дзен
-        </a>
-        <a class="btn btn--white font-alt text-18 text-md-20 bold-6 radius-2 p-2" data-waved href="" target="_blank">
-          <div class="social__item flex align-center justify-center color-green bg-white radius-max mr-4">
-            <svg class="icon text-18">
-              <use xlink:href="img/icons.svg#tg">
-            </svg>
-          </div>
-          Телеграм
-        </a>
-      </div>
-    </div>
-  </div>
+<section class="container">
+  <div id="calendar"></div>
 </section>
 
 <!-- Партнеры -->
 
-<% var partners = ['', 'delay-2', 'delay-lg-4', 'delay-2 delay-lg-6'] %>
-
 <section class="partners container bg-grey overflow-hidden">
-  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
     <span class="bold-6">Партнеры</span> проекта «Деньги в бизнес»
   </h2>
-  <div class="grid gap-4 pt-lg-5">
-    <% for (var i = 0; i < 4; i++) { %>
-      <div class="col-6 col-lg-3 ease-in-out duration-4 <%= partners[i] %> anim anim--left" data-anim="hidden">
-        <a class="card h-100" data-waved href="" target="_blank">
-          <div class="pack pack--box">
-            <picture>
-              <source srcset="img/pictures/partner-<%= i + 1 %>.webp" type="image/webp">
-              <img class="image image--sd" src="img/pictures/partner-<%= i + 1 %>.png" alt="">
-            </picture>
+  <div class="partners-slider relative">
+    <div class="swiper swiper--overwrap">
+      <div class="swiper-wrapper">
+        <% for (var i = 1; i < 5; i++) { %>
+          <div class="swiper-slide h-auto">
+            <a class="card h-100" data-waved href="" target="_blank">
+              <div class="pack pack--box">
+                <picture>
+                  <source srcset="img/pictures/partner-<%= i %>.webp" type="image/webp">
+                  <img class="image image--sd" src="img/pictures/partner-<%= i %>.png" alt="">
+                </picture>
+              </div>
+            </a>
           </div>
-        </a>
+        <% } %>
       </div>
-    <% } %>
+    </div>
+    <div class="swiper-pagination d-flex d-md-none color-second mt-5"></div>
+    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
   </div>
 </section>
 
