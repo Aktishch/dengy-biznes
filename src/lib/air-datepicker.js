@@ -1,17 +1,8 @@
 import AirDatepicker from 'air-datepicker'
 import 'air-datepicker/air-datepicker.css'
 import localeRu from 'air-datepicker/locale/ru'
-// import touchDevice from '../ts/functions/touch-device'
 
 const init = () => {
-
-  const excludeDates = [
-
-    new Date(2023, 3, 10),
-    new Date(2023, 3, 7),
-    new Date(2023, 3, 5)
-
-  ]
 
   const renderCellHandler = ({ date, cellType }) => {
 
@@ -19,13 +10,13 @@ const init = () => {
 
       return {
 
-        classes: excludeDates.includes(date) ? 'datepicker-cell--red' : null,
+        classes: window.excludeDates.includes(+date) ? 'air-datepicker-cell--active' : null,
 
-        // attrs: {
+        attrs: {
 
-        //   // 'data-filter-category': date
+          'data-filter-category': window.excludeDates.includes(+date) ? `category-${date.getDate()}-${date.getMonth() + 1}` : 'none'
 
-        // }
+        }
 
       }
 
@@ -36,7 +27,8 @@ const init = () => {
   const calendar = new AirDatepicker('#calendar', {
 
     locale: localeRu,
-    onRenderCell: renderCellHandler
+    onRenderCell: renderCellHandler,
+    selectedDates: [new Date()]
 
   })
 

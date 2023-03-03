@@ -3,6 +3,34 @@ import 'swiper/css/bundle'
 
 import media from '../ts/functions/media'
 
+const calendarSliders = () => {
+
+  const sliderFilter = new Swiper('.filter-slider .swiper', {
+
+    pagination: {
+
+      el: '.filter-slider .swiper-pagination',
+      clickable: true
+
+    },
+
+    navigation: {
+
+      prevEl: '.filter-slider .swiper-button-prev',
+      nextEl: '.filter-slider .swiper-button-next'
+
+    },
+
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    grabCursor: true,
+    allowTouchMove: false
+
+  })
+
+}
+
 const init = () => {
 
   const sliderPriority = new Swiper('.priority-slider .swiper', {
@@ -141,4 +169,4 @@ const init = () => {
 
 }
 
-export default { init }
+export default { init, calendarSliders }

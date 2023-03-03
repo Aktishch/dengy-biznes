@@ -223,8 +223,8 @@
         </span>
       </div>
       <picture>
-        <source srcset="img/pictures/logo-xl.webp" type="image/webp">
-        <img class="image image--sd" src="img/pictures/logo-xl.png" alt="">
+        <source srcset="img/pictures/logo-light.webp" type="image/webp">
+        <img class="image" src="img/pictures/logo-light.png" alt="">
       </picture>
     </div>
     <div class="flex flex-column w-100 pr-lg-10 ease-in-out duration-4 anim anim--left" data-anim="hidden">
@@ -424,7 +424,7 @@
         <div class="swiper-wrapper">
           <% for (var i = 0; i < experts.length; i++) { %>
             <div class="swiper-slide h-auto">
-              <div class="card link-wrapper pointer h-100 pt-8 pb-6 px-4 px-md-6" data-waved>
+              <div class="card link-wrapper pointer h-100 pt-8 pb-6 px-4 px-md-6" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-person.html">
                 <div class="priority__pack pack pack--box radius-max w-100 mb-10">
                   <div class="loader">
                     <span class="loader-progress">
@@ -528,10 +528,6 @@
   <div class="ease-in-out duration-4 anim anim--up" data-anim="hidden">
     <button class="btn btn--primary btn--lg btn--fill color-black text-14 text-md-16 mx-auto px-md-8" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-order.html">Заказать бесплатную консультацию</button>
   </div>
-</section>
-
-<section class="container">
-  <div id="calendar"></div>
 </section>
 
 <!-- Партнеры -->
