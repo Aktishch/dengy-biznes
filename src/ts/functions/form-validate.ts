@@ -84,7 +84,7 @@ const init = (form: HTMLFormElement): boolean => {
 
         } else {
 
-          error.innerText = 'Пожалуйста, напишите обращение!'
+          error.innerText = 'Пожалуйста, напишите вопрос!'
 
         }
 
