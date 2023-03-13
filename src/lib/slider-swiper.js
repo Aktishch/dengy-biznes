@@ -24,7 +24,6 @@ const calendarSliders = () => {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 20,
-    grabCursor: true,
     allowTouchMove: false
 
   })
