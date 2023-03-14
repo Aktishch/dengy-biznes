@@ -289,3 +289,25 @@
     }
   }
 }
+
+// Тестирование
+.testing {
+  &__block {
+    background: linear-gradient(102.4deg, #DAE6EE 0%, rgba(246, 249, 251, 0) 59.01%), #F2F6F9;
+    min-height: 390px;
+  }
+
+  &__bg {
+    mix-blend-mode: overlay;
+  }
+
+  @media(max-width: $md) {
+    &__block {
+      min-height: auto;
+    }
+
+    &__image {
+      opacity: 0.5;
+    }
+  }
+}
