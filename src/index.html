@@ -232,7 +232,17 @@
             </div>
           <% } %>
         </div>
-        <div class="swiper-pagination d-flex d-lg-none color-primary mt-5"></div>
+        <div class="swiper-pagination d-flex d-md-none color-second mt-5"></div>
+        <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-left">
+          </svg>
+        </button>
+        <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-right">
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -452,7 +462,7 @@
     <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
       Эксперты <span class="bold-6">проекта</span>
     </h2>
-    <div class="priority-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <div class="person-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
       <div class="swiper swiper--overwrap overflow-visible">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < experts.length; i++) { %>

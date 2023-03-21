@@ -41,11 +41,71 @@ const init = () => {
 
     },
 
+    navigation: {
+
+      prevEl: '.priority-slider .swiper-button-prev',
+      nextEl: '.priority-slider .swiper-button-next'
+
+    },
+
     slidesPerView: 1.2,
     slidesPerGroup: 1,
     spaceBetween: 20,
     grabCursor: true,
-    freeMode: true,
+    loop: true,
+
+    breakpoints: {
+
+      [media.md]: {
+
+        slidesPerView: 2
+
+      },
+
+      [media.lg]: {
+
+        slidesPerView: 3
+
+      },
+
+      [media.xl]: {
+
+        slidesPerView: 4
+
+      }
+
+    },
+
+    autoplay: {
+
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false
+
+    }
+
+  })
+
+  const sliderPerson = new Swiper('.person-slider .swiper', {
+
+    pagination: {
+
+      el: '.person-slider .swiper-pagination',
+      clickable: true
+
+    },
+
+    navigation: {
+
+      prevEl: '.person-slider .swiper-button-prev',
+      nextEl: '.person-slider .swiper-button-next'
+
+    },
+
+    slidesPerView: 1.2,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    grabCursor: true,
 
     breakpoints: {
 
