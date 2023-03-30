@@ -56,7 +56,7 @@ const init = () => {
 
     breakpoints: {
 
-      [media.md]: {
+      [media.sm]: {
 
         slidesPerView: 2
 
