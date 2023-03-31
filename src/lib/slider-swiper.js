@@ -86,19 +86,19 @@ const init = () => {
 
   })
 
-  const sliderPerson = new Swiper('.person-slider .swiper', {
+  const sliderExperts = new Swiper('.experts-slider .swiper', {
 
     pagination: {
 
-      el: '.person-slider .swiper-pagination',
+      el: '.experts-slider .swiper-pagination',
       clickable: true
 
     },
 
     navigation: {
 
-      prevEl: '.person-slider .swiper-button-prev',
-      nextEl: '.person-slider .swiper-button-next'
+      prevEl: '.experts-slider .swiper-button-prev',
+      nextEl: '.experts-slider .swiper-button-next'
 
     },
 
@@ -148,7 +148,7 @@ const init = () => {
 
     breakpoints: {
 
-      [media.md]: {
+      [media.sm]: {
 
         slidesPerView: 2
 

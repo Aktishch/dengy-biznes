@@ -79,12 +79,20 @@
 
 // Приоритет
 .priority {
-  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
-
-  &__pack {
-    max-width : 100px;
-    background: linear-gradient(180deg, rgba(42, 142, 151, 0.6) 0%, rgba(42, 142, 151, 0) 60.9%), #0B0F0B;
+  &-slider {
+    background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
   }
+
+  @media(max-width: $md) {
+    &-slider {
+      background: none;
+    }
+  }
+}
+
+// Эксперты
+.experts {
+  background-image: linear-gradient(90deg, #116C79 14.92%, #4DB8BA 100%);
 }
 
 // Инструменты

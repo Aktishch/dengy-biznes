@@ -192,7 +192,7 @@
   }
 ] %>
 
-<section class="priority container container--sm color-black relative overflow-hidden" data-theme="light">
+<section class="priority container container--sm bg-grey color-black relative overflow-hidden" data-theme="light">
   <div class="bg-block pointer-none fade-20">
     <div class="pack pack--rect h-100">
       <picture>
@@ -202,11 +202,11 @@
     </div>
   </div>
   <div class="relative">
-    <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
       Приоритетные <span class="bold-6">направления бизнеса</span>
     </h2>
-    <div class="priority-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
-      <div class="swiper swiper--overwrap overflow-visible">
+    <div class="priority-slider relative radius-8 p-md-4 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <div class="swiper swiper--overwrap">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < directions.length; i++) { %>
             <div class="swiper-slide h-auto">
@@ -232,18 +232,18 @@
             </div>
           <% } %>
         </div>
-        <div class="swiper-pagination d-flex d-md-none color-second mt-5"></div>
-        <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
-          <svg class="icon">
-            <use xlink:href="img/icons.svg#arrow-left">
-          </svg>
-        </button>
-        <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
-          <svg class="icon">
-            <use xlink:href="img/icons.svg#arrow-right">
-          </svg>
-        </button>
       </div>
+      <div class="swiper-pagination d-flex d-md-none color-second mt-5"></div>
+      <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#arrow-left">
+        </svg>
+      </button>
+      <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#arrow-right">
+        </svg>
+      </button>
     </div>
   </div>
 </section>
@@ -449,7 +449,7 @@
   }
 ] %>
 
-<section class="priority container container--sm color-black relative overflow-hidden" data-theme="light">
+<section class="experts container container--sm color-black relative overflow-hidden" data-theme="light">
   <div class="bg-block pointer-none fade-20">
     <div class="pack pack--rect h-100">
       <picture>
@@ -462,25 +462,12 @@
     <h2 class="font-alt text text--center color-white text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
       Эксперты <span class="bold-6">проекта</span>
     </h2>
-    <div class="person-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
+    <div class="experts-slider relative ease-in-out duration-4 anim anim--up" data-anim="hidden">
       <div class="swiper swiper--overwrap overflow-visible">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < experts.length; i++) { %>
             <div class="swiper-slide h-auto">
               <div class="card link-wrapper pointer h-100 pt-8 pb-6 px-4 px-md-6" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-person.html">
-                <div class="priority__pack pack pack--box radius-max w-100 mb-10">
-                  <div class="loader">
-                    <span class="loader-progress">
-                      <svg class="loader-icon icon">
-                        <use xlink:href="img/icons.svg#loader">
-                      </svg>
-                    </span>
-                  </div>
-                  <picture>
-                    <source srcset="img/pictures/person.webp" type="image/webp">
-                    <img class="image" loading="lazy" src="img/pictures/person.png" alt="">
-                  </picture>
-                </div>
                 <div class="card-content">
                   <h4 class="text-18 text-md-20 bold-6 lh-3 mb-3"><%= experts[i].name %></h4>
                   <p class="link text-14 text-md-16 bold-4 lh-4 fade-60 mb-5 mb-md-8"><%= experts[i].text %></p>
