@@ -12,6 +12,7 @@ import accordion from './ts/accordion'
 import formSubmit from './ts/form-submit'
 import inputs from './ts/inputs'
 import maskTel from './ts/mask-tel'
+import scrollTo from './ts/scroll-to'
 
 // Style
 import './scss/index.scss'
@@ -30,5 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
   formSubmit.init()
   inputs.init()
   maskTel.init()
+  scrollTo.init()
 
 })
