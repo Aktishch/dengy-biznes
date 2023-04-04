@@ -140,11 +140,55 @@ const init = () => {
 
     },
 
+    navigation: {
+
+      prevEl: '.programs-slider .swiper-button-prev',
+      nextEl: '.programs-slider .swiper-button-next'
+
+    },
+
     slidesPerView: 1.2,
     slidesPerGroup: 1,
     spaceBetween: 20,
     grabCursor: true,
-    freeMode: true,
+
+    breakpoints: {
+
+      [media.sm]: {
+
+        slidesPerView: 2
+
+      },
+
+      [media.lg]: {
+
+        slidesPerView: 3
+
+      },
+
+      [media.xl]: {
+
+        slidesPerView: 4
+
+      }
+
+    }
+
+  })
+
+  const sliderPlatforms = new Swiper('.platforms-slider .swiper', {
+
+    pagination: {
+
+      el: '.platforms-slider .swiper-pagination',
+      clickable: true
+
+    },
+
+    slidesPerView: 1.2,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    grabCursor: true,
 
     breakpoints: {
 

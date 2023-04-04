@@ -165,7 +165,7 @@
 
 // Программа
 .programs {
-  &-slider {
+  &__block {
     background-color: var(--color-black-10);
   }
 
@@ -178,7 +178,7 @@
   }
 
   @media(max-width: $md) {
-    &-slider {
+    &__block {
       border-radius: 0;
       background   : none;
     }
