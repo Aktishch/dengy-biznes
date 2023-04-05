@@ -214,60 +214,6 @@ const init = () => {
 
   })
 
-  const sliderPartners = new Swiper('.partners-slider .swiper', {
-
-    pagination: {
-
-      el: '.partners-slider .swiper-pagination',
-      clickable: true
-
-    },
-
-    navigation: {
-
-      prevEl: '.partners-slider .swiper-button-prev',
-      nextEl: '.partners-slider .swiper-button-next'
-
-    },
-
-    slidesPerView: 1.2,
-    slidesPerGroup: 1,
-    spaceBetween: 20,
-    grabCursor: true,
-    loop: true,
-
-    breakpoints: {
-
-      [media.sm]: {
-
-        slidesPerView: 2
-
-      },
-
-      [media.lg]: {
-
-        slidesPerView: 3
-
-      },
-
-      [media.xl]: {
-
-        slidesPerView: 4
-
-      }
-
-    },
-
-    autoplay: {
-
-      delay: 3000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false
-
-    }
-
-  })
-
   window.Swiper = Swiper
 
 }

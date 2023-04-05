@@ -560,41 +560,4 @@
   </div>
 </section>
 
-<!-- Партнеры -->
-
-<section class="partners container bg-grey overflow-hidden">
-  <h2 class="font-alt text text--center text-24 text-md-28 text-lg-36 bold-4 lh-3 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
-    <span class="bold-6">Партнеры</span> проекта «Деньги в бизнес»
-  </h2>
-  <div class="partners-slider relative">
-    <div class="swiper swiper--overwrap">
-      <div class="swiper-wrapper">
-        <% for (var i = 1; i < 5; i++) { %>
-          <div class="swiper-slide h-auto">
-            <a class="card h-100" data-waved href="" target="_blank">
-              <div class="pack pack--box">
-                <picture>
-                  <source srcset="img/pictures/partner-<%= i %>.webp" type="image/webp">
-                  <img class="image image--sd" src="img/pictures/partner-<%= i %>.png" alt="">
-                </picture>
-              </div>
-            </a>
-          </div>
-        <% } %>
-      </div>
-    </div>
-    <div class="swiper-pagination d-flex d-md-none color-second mt-5"></div>
-    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
-      <svg class="icon">
-        <use xlink:href="img/icons.svg#arrow-left">
-      </svg>
-    </button>
-    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
-      <svg class="icon">
-        <use xlink:href="img/icons.svg#arrow-right">
-      </svg>
-    </button>
-  </div>
-</section>
-
 <%= require('./includes/footer.html').default %>

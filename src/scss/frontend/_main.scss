@@ -152,17 +152,6 @@
   }
 }
 
-// Бизнес
-.business {
-  @media(min-width: $md) {
-    &__pack {
-      &::before {
-        padding-top: 65%;
-      }
-    }
-  }
-}
-
 // Программа
 .programs {
   &__block {
