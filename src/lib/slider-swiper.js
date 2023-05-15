@@ -123,7 +123,8 @@ const init = () => {
 
       [media.xl]: {
 
-        slidesPerView: 4
+        slidesPerView: 4,
+        allowTouchMove: false,
 
       }
 
